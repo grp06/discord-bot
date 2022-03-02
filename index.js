@@ -43,7 +43,7 @@ app.get("/get-guilds-roles/:guildId", async (req, res) => {
 // pass in discord username and badge name as body
 app.post("/add-roles/:guildId", async (req, res) => {
   const { roles, discordUsername } = req.body 
-  
+  // add error handling
   const { guildId } = req.params
   const guild = await client.guilds.fetch(guildId);
   
@@ -59,7 +59,9 @@ app.post("/add-roles/:guildId", async (req, res) => {
   console.log("🚀 ~ rolesArr ~ rolesArr", rolesArr)
   
   const memberId = membersArr.find((member) => member.username === discordUsername).id
+  console.log("🚀 ~ app.post ~ memberId", memberId)
   const memberObj = await guild.members.fetch(memberId);      
+  console.log("🚀 ~ app.post ~ memberObj", memberObj)
   
   const roleIds = []
   rolesArr.forEach(r => {
