@@ -27,7 +27,7 @@ app.use(bodyParser.json())
 // then call the addRoles endpoint
 
 
-app.post("/get-guilds-roles/:guildId", async (req, res) => {
+app.get("/get-guilds-roles/:guildId", async (req, res) => {
   const { guildId } = req.params
   
   const guild = await client.guilds.fetch(guildId)
