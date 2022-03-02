@@ -10,7 +10,7 @@ const client = new Client({ intents: [GUILDS, GUILD_MESSAGES, GUILD_MEMBERS, GUI
 client.login(process.env.DISCORD_TOKEN)
 
 const app = express()
-const port = 8000
+const port = process.env.PORT || 8000
 
 
 // Otterspace
