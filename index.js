@@ -76,7 +76,9 @@ app.post("/add-roles/:guildId", async (req, res) => {
   roleIds.forEach((id) => memberObj.roles.add(id))
   
 
-  res.status(200).end()
+  res.json({
+    success: true
+  })
 })
 
 app.post("/webhooks/setup-bot/:guildId", async (req, res) => {
