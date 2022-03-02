@@ -1,26 +1,31 @@
+
 {
-  "name": "otterspace-discord-bot",
+  "name": "node-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "This example is so cool.",
   "main": "web.js",
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
     "lint": "prettier --write ."
   },
-  "type": "module",
-  "keywords": [],
-  "author": "George Pickett",
-  "license": "ISC",
+  "type": "module",  
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "jane-doe",
+  "license": "MIT",
   "dependencies": {
+    "express": "^4.9.8",
     "body-parser": "^1.19.2",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
+
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
